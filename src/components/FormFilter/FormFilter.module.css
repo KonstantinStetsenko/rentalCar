@@ -108,6 +108,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px; /* 125% */
+  border: none;
 }
 .buttonSearch:hover {
   background: var(--button, #0b44cd);
