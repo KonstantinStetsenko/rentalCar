@@ -1,6 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useId } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { validationSchemaSendForm } from '../../utils/validationSendForm.js';
 import DateCalendarReferenceDate from '../Calendars/Calendars.jsx';
 import css from './SendForm.module.css';
@@ -37,69 +38,63 @@ export default function SendForm() {
         validationSchema={validationSchemaSendForm}
         onSubmit={handleSubmit}
       >
-        {({ errors, touched }) => (
-          <Form className={css.form}>
-            <div className={css.fieldContainer}>
-              <Field
-                className={css.inputForm}
-                type="text"
-                name="username"
-                placeholder="Name*"
-                id={nameFieldId}
-              />
-              <div className={css.errorContainer}>
-                <ErrorMessage
-                  name="name"
-                  component="div"
-                  className={css.error}
-                />
-              </div>
+        <Form className={css.form}>
+          <div className={css.fieldContainer}>
+            <Field
+              className={css.inputForm}
+              type="text"
+              name="username"
+              placeholder="Name*"
+              id={nameFieldId}
+            />
+            <div className={css.errorContainer}>
+              <ErrorMessage name="name" component="div" className={css.error} />
             </div>
+          </div>
 
-            <div className={css.fieldContainer}>
-              <Field
-                className={css.inputForm}
-                type="email"
+          <div className={css.fieldContainer}>
+            <Field
+              className={css.inputForm}
+              type="email"
+              name="email"
+              id={emailFieldId}
+              placeholder="Email*"
+            />
+            <div className={css.errorContainer}>
+              <ErrorMessage
                 name="email"
-                id={emailFieldId}
-                placeholder="Email*"
+                component="div"
+                className={css.error}
               />
-              <div className={css.errorContainer}>
-                <ErrorMessage
-                  name="email"
-                  component="div"
-                  className={css.error}
-                />
-              </div>
             </div>
+          </div>
 
-            <DateCalendarReferenceDate />
+          <DateCalendarReferenceDate />
 
-            <div className={css.fieldContainer}>
-              <Field
-                className={css.inputTextarea}
-                as="textarea"
+          <div className={css.fieldContainer}>
+            <Field
+              className={css.inputTextarea}
+              as="textarea"
+              name="message"
+              id={msgFieldId}
+              rows="5"
+              placeholder="Message*"
+            />
+            <div className={css.errorContainer}>
+              <ErrorMessage
                 name="message"
-                id={msgFieldId}
-                rows="5"
-                placeholder="Message*"
+                component="div"
+                className={css.error}
               />
-              <div className={css.errorContainer}>
-                <ErrorMessage
-                  name="message"
-                  component="div"
-                  className={css.error}
-                />
-              </div>
             </div>
+          </div>
 
-            <div className={css.btnFormContainer}>
-              <button type="submit" className={css.btnForm}>
-                Submit
-              </button>
-            </div>
-          </Form>
-        )}
+          <div className={css.btnFormContainer}>
+            <button type="submit" className={css.btnForm}>
+              Submit
+            </button>
+          </div>
+        </Form>
       </Formik>
       <ToastContainer />
     </>
