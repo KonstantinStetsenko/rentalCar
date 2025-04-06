@@ -1,0 +1,153 @@
+.catalog {
+  margin-top: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carImage {
+  width: 276px;
+  height: 268px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 20, 23, 0.5) 2.5%,
+      rgba(18, 20, 23, 0) 41.07%
+    ),
+    url(<path-to-image>) lightgray -0.343px 0px / 100.171% 100% no-repeat;
+}
+.carList {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carName {
+  color: var(--main, #101828);
+
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+.carDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.carPrice {
+  color: var(--main, #101828);
+
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+.carLocation {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: var(--gray, #8d929a);
+  /* body 2 */
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.carLocation p:last-child {
+  border-right: none; /* Убираем черточку у последнего элемента */
+}
+
+.cityCountry1 {
+  padding-right: 6px;
+}
+
+.cityCountry2 {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+.carLocationText {
+  padding: 0;
+  margin-top: 8px;
+}
+.rentalCompany {
+  display: flex;
+  margin-left: 6px;
+  align-items: center;
+}
+.carInfo {
+  margin-top: 4px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+}
+.carType {
+  border-right: 1px solid #ccc;
+  padding-right: 6px;
+  color: var(--gray, #8d929a);
+
+  /* body 2 */
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.carMileage {
+  padding-left: 6px;
+  color: var(--gray, #8d929a);
+
+  /* body 2 */
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.carCard {
+  margin-bottom: 48px;
+}
+
+.imageContainer {
+  position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+  display: inline-block; /* Чтобы содержимое не растягивалось */
+}
+
+.carImage {
+  display: block; /* Убираем лишние отступы вокруг изображения */
+}
+
+.iconCar {
+  position: absolute; /* Абсолютное позиционирование для размещения поверх изображения */
+  top: 10px; /* Отступ сверху */
+  right: 10px; /* Отступ справа */
+  width: 24px; /* Размер иконки */
+  height: 24px;
+  color: red;
+  fill: red; /* Цвет иконки */
+  cursor: pointer; /* Указатель мыши при наведении */
+}
+.iconCar {
+  fill: inherit; /* Убедитесь, что fill берется из inline-стиля */
+  transition: fill 0.3s ease; /* Добавьте плавный переход цвета */
+}
+
+.liked {
+  fill: rgb(40, 16, 197); /* Цвет для "избранного" */
+}
+
+.unliked {
+  fill: gray; /* Цвет для "неизбранного" */
+}

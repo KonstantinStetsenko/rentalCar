@@ -1,0 +1,132 @@
+/* Общие стили для контейнеров */
+.inputContainer {
+  margin-bottom: 16px;
+}
+
+.inputContainerMinMileage,
+.inputContainerMaxMileage {
+  position: relative;
+  width: 100%;
+}
+
+.inputContainerMinMileage::before,
+.inputContainerMaxMileage::before {
+  content: attr(
+    data-placeholder
+  ); /* Используем data-placeholder для кастомного текста */
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  left: 8px; /* Отступ слева */
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #000000; /* Цвет текста плейсхолдера по умолчанию */
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  color: var(--main, #101828);
+
+  /* body */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+
+/* Изменение цвета текста плейсхолдера при вводе текста */
+.inputContainerMinMileage:focus-within::before,
+.inputContainerMaxMileage:focus-within::before {
+  color: #000000; /* Меняем цвет текста плейсхолдера */
+}
+
+.inputContainerMinMileage:not(:focus-within):has(
+    input:not(:placeholder-shown)
+  )::before,
+.inputContainerMaxMileage:not(:focus-within):has(
+    input:not(:placeholder-shown)
+  )::before {
+  color: #020202; /* Цвет текста плейсхолдера, если есть текст, но поле не в фокусе */
+}
+
+/* Стили для полей */
+.maxMil {
+  width: 160px;
+
+  padding: 12px 12px 12px 50px; /* Отступы внутри поля */
+  font-size: 16px;
+  line-height: 1;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: none;
+  color: var(--gray, #000000);
+}
+
+.minMil {
+  width: 160px;
+
+  padding: 12px 12px 12px 30px; /* Отступы внутри поля */
+  font-size: 16px;
+  line-height: 1;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: none;
+  color: var(--gray, #030303);
+}
+.labelInput {
+  color: var(--gray, #8d929a);
+
+  /* body 2 */
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.filterCatalog {
+  display: flex;
+  flex-direction: row;
+}
+.inputBlock {
+  display: flex;
+  flex-direction: row;
+}
+.buttonSearch {
+  display: flex;
+  width: 156px;
+  height: 44px;
+  padding: 12px 51px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--button, #3470ff);
+  color: var(--white, #fff);
+
+  /* button */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+.buttonSearch:hover {
+  background: var(--button, #0b44cd);
+  cursor: pointer;
+}
+.buttonSearch:active {
+  background: var(--button, #0b44cd);
+  cursor: pointer;
+}
+.filterCatalog {
+  height: 80px;
+}
+.labelSelect {
+  color: var(--gray, #8d929a);
+
+  /* body 2 */
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Manrope'; /* Укажите имя шрифта */
+  src:
+    url('../../fonts/Manrope-Regular.woff2') format('woff2'),
+    url('../../fonts/Manrope-Regular.woff') format('woff'); /* Укажите пути к файлам шрифта */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  /* align-content: center;  Удалите это */
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--badges, #f2f4f7);
+  background: var(--badges, #f2f4f7);
+}
+.nav {
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+}
+.navList {
+  color: var(--main, #101828);
+  text-align: center;
+
+  /* body */
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+.navList:hover {
+  color: rgb(151, 151, 151);
+}
+
+.link {
+  color: var(--button-hover, #0b44cd);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+.active {
+  text-decoration: underline;
+  color: var(--main, #101828);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+.header_item {
+  display: flex; /* Включаем Flexbox */
+  justify-content: space-between; /* Размещаем элементы по краям */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  width: 100%; /* Занимаем всю доступную ширину */
+  height: 100%; /* Занимаем всю доступную высоту */
+}
+
+.icon {
+  width: 104px;
+  height: 16px;
+  flex-shrink: 0;
+}
