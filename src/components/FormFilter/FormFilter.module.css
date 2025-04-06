@@ -113,10 +113,12 @@
 .buttonSearch:hover {
   background: var(--button, #0b44cd);
   cursor: pointer;
+  border: none;
 }
 .buttonSearch:active {
   background: var(--button, #0b44cd);
   cursor: pointer;
+  border: none;
 }
 .filterCatalog {
   height: 80px;
