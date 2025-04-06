@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useEffect, useId } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import Select, { components } from 'react-select';
+import Select from 'react-select';
 import { setListBrand } from '../../redux/listBrandSlice.js';
 import { fetchCarNameBrand } from '../../services/car-API.js';
 import { updateFilters } from '../../utils/updateParams.js';
@@ -17,10 +17,7 @@ export const FormFilter = () => {
   const dispatch = useDispatch();
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const brand = useSelector((state) => state.filter.brand) || '';
-  const rentalPrice = useSelector((state) => state.filter.rentalPrice) || '';
-  const minMileage = useSelector((state) => state.filter.minMileage) || '';
-  const maxMileage = useSelector((state) => state.filter.maxMileage) || '';
+
   const listBrand = useSelector((state) => state.listBrand.listBrand);
 
   useEffect(() => {
