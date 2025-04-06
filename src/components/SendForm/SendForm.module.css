@@ -96,7 +96,7 @@
   border-radius: 12px;
   background: var(--button, #3470ff);
   color: white;
-  color: var(--white, #fff);
+
   box-shadow: none;
   font-family: Manrope;
   font-size: 16px;
@@ -104,6 +104,7 @@
   font-weight: 600;
   line-height: 20px; /* 125% */
   transition: background-color 0.3s ease;
+  border: none;
 }
 .btnForm:hover {
   background: var(--button, #0b44cd);
