@@ -3,7 +3,7 @@ import React from 'react';
 import './Calendar.global.css';
 
 const onChange = (date, dateString) => {
-  console.log(date, dateString);
+  // console.log(date, dateString);
 };
 
 const App = () => (
