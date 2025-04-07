@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useEffect, useId } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 import { setListBrand } from '../../redux/listBrandSlice.js';
 import { fetchCarNameBrand } from '../../services/car-API.js';
 import { updateFilters } from '../../utils/updateParams.js';
@@ -142,6 +142,7 @@ export const FormFilter = () => {
                 }}
                 styles={customStyles}
                 placeholder="Choose a brand"
+                components={{}}
               />
             </div>
 

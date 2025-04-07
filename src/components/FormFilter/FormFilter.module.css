@@ -133,3 +133,10 @@
   font-weight: 400;
   line-height: 16px; /* 133.333% */
 }
+.error {
+  color: red;
+  font-size: 12px;
+  font-family: Manrope;
+  margin-top: 5px;
+  min-height: 18px;
+}
