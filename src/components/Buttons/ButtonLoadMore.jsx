@@ -2,11 +2,13 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import * as React from 'react';
 
-export default function ButtonsLoadMore({ onClick }) {
+const ButtonsLoadMore = React.forwardRef(({ onClick }, ref) => {
   return (
     <Stack spacing={2} direction="row">
       <Button
+        ref={ref} // Привязываем реф к кнопке
         onClick={onClick}
+        id="loadMoreButton"
         sx={{
           display: 'flex',
           marginTop: '80px',
@@ -24,4 +26,6 @@ export default function ButtonsLoadMore({ onClick }) {
       </Button>
     </Stack>
   );
-}
+});
+
+export default ButtonsLoadMore;

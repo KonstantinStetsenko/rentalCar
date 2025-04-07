@@ -21,12 +21,12 @@
 }
 .carList {
   margin-top: 56px;
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid; /* Используем Grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 столбца одинаковой ширины */
+  gap: 32px; /* Расстояние между элементами */
+  justify-content: center; /* Центрируем элементы */
 }
+
 .carName {
   color: var(--main, #101828);
 
@@ -117,7 +117,10 @@
   line-height: 16px; /* 133.333% */
 }
 .carCard {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 48px;
+  overflow: hidden;
 }
 
 .imageContainer {

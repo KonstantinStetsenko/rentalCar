@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useSearchParams } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ButtonsLoadMore from '../components/Buttons/ButtonLoadMore.jsx';
@@ -33,6 +34,16 @@ export default function Catalog() {
   const hasMore = useSelector((state) => state.filter.hasMore);
   const carData = useSelector((state) => state.filter.carData);
   const likedCars = useSelector((state) => state.filter.likedCars);
+
+  const loadMoreButtonRef = useRef(null);
+
+  const scrollToButton = () => {
+    scroller.scrollTo('loadMoreButton', {
+      duration: 2500, // Длительность прокрутки в миллисекундах
+      delay: 0, // Задержка перед началом прокрутки
+      smooth: 'easeInOutCubic', // Плавность прокрутки
+    });
+  };
 
   useEffect(() => {
     const params = {
@@ -79,6 +90,8 @@ export default function Catalog() {
         });
       } finally {
         dispatch(setLoading(false));
+
+        scrollToButton();
       }
     };
 
@@ -208,7 +221,9 @@ export default function Catalog() {
             <Spinner />
           </div>
         )}
-        {hasMore && <ButtonsLoadMore onClick={loadMore} />}
+        {hasMore && (
+          <ButtonsLoadMore ref={loadMoreButtonRef} onClick={loadMore} />
+        )}
 
         <ToastContainer />
       </div>
