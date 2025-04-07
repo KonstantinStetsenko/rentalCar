@@ -39,9 +39,9 @@ export default function Catalog() {
 
   const scrollToButton = () => {
     scroller.scrollTo('loadMoreButton', {
-      duration: 2500, // Длительность прокрутки в миллисекундах
-      delay: 0, // Задержка перед началом прокрутки
-      smooth: 'easeInOutCubic', // Плавность прокрутки
+      duration: 2500,
+      delay: 0,
+      smooth: 'easeInOutCubic',
     });
   };
 

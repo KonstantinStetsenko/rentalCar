@@ -21,10 +21,10 @@
 }
 .carList {
   margin-top: 56px;
-  display: grid; /* Используем Grid */
-  grid-template-columns: repeat(4, 1fr); /* 4 столбца одинаковой ширины */
-  gap: 32px; /* Расстояние между элементами */
-  justify-content: center; /* Центрируем элементы */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-content: center;
 }
 
 .carName {
@@ -65,7 +65,7 @@
 }
 
 .carLocation p:last-child {
-  border-right: none; /* Убираем черточку у последнего элемента */
+  border-right: none;
 }
 
 .cityCountry1 {
@@ -124,33 +124,33 @@
 }
 
 .imageContainer {
-  position: relative; /* Устанавливаем относительное позиционирование для контейнера */
-  display: inline-block; /* Чтобы содержимое не растягивалось */
+  position: relative;
+  display: inline-block;
 }
 
 .carImage {
-  display: block; /* Убираем лишние отступы вокруг изображения */
+  display: block;
 }
 
 .iconCar {
-  position: absolute; /* Абсолютное позиционирование для размещения поверх изображения */
-  top: 10px; /* Отступ сверху */
-  right: 10px; /* Отступ справа */
-  width: 24px; /* Размер иконки */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
   height: 24px;
   color: red;
-  fill: red; /* Цвет иконки */
-  cursor: pointer; /* Указатель мыши при наведении */
+  fill: red;
+  cursor: pointer;
 }
 .iconCar {
-  fill: inherit; /* Убедитесь, что fill берется из inline-стиля */
-  transition: fill 0.3s ease; /* Добавьте плавный переход цвета */
+  fill: inherit;
+  transition: fill 0.3s ease;
 }
 
 .liked {
-  fill: rgb(40, 16, 197); /* Цвет для "избранного" */
+  fill: rgb(40, 16, 197);
 }
 
 .unliked {
-  fill: gray; /* Цвет для "неизбранного" */
+  fill: gray;
 }
