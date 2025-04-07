@@ -112,7 +112,7 @@ export default function Catalog() {
   const loadMore = () => {
     if (isLoading) {
       toast.info('Data is loading...', {
-        position: 'top-right',
+        position: 'bottom-right',
         autoClose: 3000,
       });
       return;
@@ -120,7 +120,7 @@ export default function Catalog() {
 
     if (!hasMore) {
       toast.warn('No more data to load!', {
-        position: 'top-right',
+        position: 'bottom-right',
         autoClose: 3000,
       });
       return;
